@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedLibraryComponent, HeaderComponent, FooterComponent, SidebarComponent } from '@mezomon/shared-library-test'
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { FooterComponent, HeaderComponent, SharedLibraryComponent, SidebarComponent, getStoreModule, msalAuthModule } from '@mezomon/shared-library-test';
 
 
 @NgModule({
@@ -15,10 +15,16 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedLibraryComponent,
+    msalAuthModule,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    getStoreModule(),
+    StoreDevtoolsModule.instrument({
+        maxAge: 25,
+        logOnly: false,
+        connectInZone: true,
+      }),
   ],
   providers: [],
   bootstrap: [AppComponent],

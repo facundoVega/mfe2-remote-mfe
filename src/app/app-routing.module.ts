@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClaimModule } from './claim/claim.module';
 import { ClaimComponent } from './claim/claim.component';
+import { msalGuardCanActivate } from '@mezomon/shared-library-test';
 
-const routes: Routes = [{path: '', component: ClaimComponent}];
+const routes: Routes = [
+  {path: '', component: ClaimComponent,  canActivate:  [msalGuardCanActivate]}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
