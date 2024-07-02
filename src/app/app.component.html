@@ -4,8 +4,8 @@
   <sidebar-component [routes]='routes'></sidebar-component>
   <div class="main-container">
     Hello user: {{ $user | async }}
+
     <router-outlet></router-outlet>
-    <button (click)='logout()'>Logout</button>
   </div>
   <footer-component></footer-component>
 </div>
