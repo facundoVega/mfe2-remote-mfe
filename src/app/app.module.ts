@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedLibraryComponent, HeaderComponent, FooterComponent, SidebarComponent } from '@mezomon/shared-library-test'
+import { SharedLibraryComponent, HeaderComponent, FooterComponent, SidebarComponent, UserCardHeaderComponent } from '@mezomon/shared-library-test'
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 
@@ -23,6 +23,7 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
     }),
     SharedLibraryComponent,
     HeaderComponent,
+    UserCardHeaderComponent,
     FooterComponent,
     SidebarComponent
   ],
