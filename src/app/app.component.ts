@@ -20,6 +20,10 @@ export class AppComponent implements OnInit {
   ) {
   }
 
+  getStore(): Store {
+    return this.store;
+  }
+
   ngOnInit(): void {
     this.msalCustomService.checkLogin().subscribe((userName)=> { 
       this.user = userName;
