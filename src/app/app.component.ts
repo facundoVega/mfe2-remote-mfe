@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { currentUser } from "@mezomon/shared-library-test";
-import { Store } from "@ngrx/store";
+import { LibRoute, MsalCustomService, currentUser } from "@mezomon/shared-library-test";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
-  title = 'claims';
+export class AppComponent {
+  routes: LibRoute[] = [
+    { title: 'claims', link:''}
+  ]
 
-  constructor(private store: Store) {}
-
-  ngOnInit(): void {
-    this.store.dispatch(currentUser({userName: ''}));
-  }
 }

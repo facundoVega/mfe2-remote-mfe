@@ -15,12 +15,6 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot(),
-    StoreDevtoolsModule.instrument({
-      maxAge: 25,
-      logOnly: false,
-      connectInZone: true,
-    }),
     SharedLibraryComponent,
     HeaderComponent,
     FooterComponent,

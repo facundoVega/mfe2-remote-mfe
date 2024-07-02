@@ -1,4 +1,9 @@
 
-     <router-outlet></router-outlet>
-  
-  
+<div class="container">
+  <header-component></header-component>
+  <sidebar-component [routes]='routes'></sidebar-component>
+  <div class="main-container">
+    <router-outlet></router-outlet>
+  </div>
+  <footer-component></footer-component>
+</div>
